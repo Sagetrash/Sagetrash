@@ -69,3 +69,4 @@ tools/
   "linkedin": "https://linkedin.com/in/Ayush-Sharma17"
 }
 ```
+![](https://ghchart.rshah.org/b53710/sagetrash)
