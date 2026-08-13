@@ -23,7 +23,7 @@ class DeveloperProfile:
         self.name = "Ayush Sharma"
         self.handle = "Sagetrash"
         self.role = "Backend Engineer & AI Systems Architect"
-        self.current_focus = ["Agentic AI", "High-Performance REST APIs", "MLOps"]
+        self.current_focus = ["Agentic AI", "Antigravity SDK", "High-Performance REST APIs"]
         self.philosophy = "You can always do it better and faster."
 
     def execute_daily_routine(self):
@@ -51,7 +51,8 @@ print(DeveloperProfile().execute_daily_routine())
 ### 🚀 Backend & AI Frameworks
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Google Gemini](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
+![Google GenAI SDK](https://img.shields.io/badge/Google_GenAI_SDK-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
+![Antigravity](https://img.shields.io/badge/Antigravity-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
 ### ☁️ Infrastructure & Cloud
 ![Linux](https://img.shields.io/badge/Linux_CachyOS-FCC624?style=for-the-badge&logo=linux&logoColor=black)
@@ -60,6 +61,7 @@ print(DeveloperProfile().execute_daily_routine())
 
 ### 🛠 Tools & Environment
 ![Bruno](https://img.shields.io/badge/Bruno-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![OpenCode](https://img.shields.io/badge/OpenCode-00F5D4?style=for-the-badge&logo=codeforces&logoColor=black)
 
 ---
 
@@ -67,8 +69,8 @@ print(DeveloperProfile().execute_daily_routine())
 
 | Project | Highlights & Technical Scope | Stack |
 | :--- | :--- | :--- |
-| 🤖 **[SimpleAiAgent](https://github.com/Sagetrash/SimpleAiAgent)** | Autonomous AI agent powered by Gemini 2.5 with multi-step directory traversal, safe file state modification, and dynamic Python script execution. | `Python` `Gemini 2.5` `Agentic AI` |
-| ⚡ **[Ai-log-analyzer](https://github.com/Sagetrash/Ai-log-analyzer)** | Microservice REST API built for real-time log ingestion, automated root-cause extraction, and structured JSON responses. | `FastAPI` `Gemini 1.5` `Python` |
+| 🤖 **[SimpleAiAgent](https://github.com/Sagetrash/SimpleAiAgent)** | Autonomous AI agent powered by GenAI SDK with multi-step directory traversal, safe file state modification, and dynamic Python script execution. | `Python` `GenAI SDK` `Agentic AI` |
+| ⚡ **[Ai-log-analyzer](https://github.com/Sagetrash/Ai-log-analyzer)** | Microservice REST API built for real-time log ingestion, automated root-cause extraction, and structured JSON responses. | `FastAPI` `GenAI SDK` `Python` |
 | 🌐 **[intelligence-platform](https://github.com/Sagetrash/intelligence-platform)** | Scalable intelligence platform engineered for complex data transformation, analytics, and automated insight generation. | `TypeScript` `Node.js` |
 
 ---
@@ -76,7 +78,7 @@ print(DeveloperProfile().execute_daily_routine())
 ## ⚡ Technical Impact
 
 - 🚀 **Ops Automation:** Engineered an AWS cloud processing pipeline boosting listing throughput by **200%** (20 to 65+ items/day).
-- ⚡ **AI Microservices:** Architected REST APIs with FastAPI & Gemini 1.5/2.5 for automated log diagnostics.
+- ⚡ **AI Microservices:** Architected REST APIs with FastAPI & Google GenAI SDK for automated log diagnostics.
 
 ---
 
