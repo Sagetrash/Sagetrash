@@ -29,7 +29,7 @@ jobs:
 
       - name: Generate A4 PDF Resume
         run: |
-          chrome --headless=new --disable-gpu --no-pdf-header-footer --print-to-pdf=Ayush_Sharma_Resume.pdf file://$(pwd)/index.html
+          chrome --headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu --no-pdf-header-footer --print-to-pdf=Ayush_Sharma_Resume.pdf file://$(pwd)/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
