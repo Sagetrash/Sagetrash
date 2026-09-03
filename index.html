@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Sharma - Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Clean floating action buttons (hidden when printed) -->
+  <div class="print-bar no-print">
+    <a href="Ayush_Sharma_Resume.pdf" download="Ayush_Sharma_Resume.pdf" class="print-btn download-btn" title="Download pre-compiled A4 PDF">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      Download PDF
+    </a>
+    <button type="button" onclick="window.print()" class="print-btn" title="Print or Save via browser">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+      Print
+    </button>
+  </div>
+
+  <div class="resume">
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="name">AYUSH SHARMA</h1>
+      <div class="contact-info">
+        Jaipur, Rajasthan | +91 9460268832
+      </div>
+      <div class="contact-links">
+        <a href="mailto:ayushsharma.as200517@gmail.com">ayushsharma.as200517@gmail.com</a> |
+        <a href="https://github.com/Sagetrash" target="_blank" rel="noopener noreferrer">GitHub</a> |
+        <a href="https://linkedin.com/in/Ayush-Sharma17" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </header>
+
+    <!-- PROFILE -->
+    <section class="section">
+      <h2 class="section-title">PROFILE</h2>
+      <p class="profile-text">
+        B.Tech Computer Science student with a strong academic background specializing in backend development and AI applications. Passionate about building robust systems with AI intelligent features integrated. Actively seeking work opportunities to apply my problem-solving abilities and creative thinking within a forward-looking, high-impact engineering team.
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section">
+      <h2 class="section-title">EDUCATION</h2>
+      <div class="education-block">
+        <div class="flex-row">
+          <span class="university-name">School of Engineering, JECRC University, Jaipur, Rajasthan</span>
+          <span class="timeline"><em>2023 &ndash; Present</em></span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>B.Tech in Computer Science and Engineering</strong> | <strong>Current CGPA: 8.9/10</strong></li>
+          <li><strong>Relevant Coursework:</strong> Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems (SQL), Google Cloud.</li>
+        </ul>
+      </div>
+      <div class="school-row flex-row">
+        <span><strong>St. Mary’s Convent Sr. Sec. School, Jaipur, Rajasthan</strong> | CBSE Class XII | <strong>Percentage: 90.2%</strong></span>
+        <span class="timeline"><em>2022 &ndash; 2023</em></span>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="section">
+      <h2 class="section-title">TECHNICAL SKILLS</h2>
+      <ul class="bullet-list skills-list">
+        <li><strong>Languages:</strong> Python, Java, SQL (PostgreSQL, SQLite), JavaScript, HTML/CSS.</li>
+        <li><strong>AI &amp; LLM:</strong> Gemini API, RAG, Agentic AI, Prompt Engineering, n8n Automation.</li>
+        <li><strong>Frameworks &amp; APIs:</strong> FastAPI, Flask, OpenAPI / Swagger UI, RESTful APIs, Pandas.</li>
+        <li><strong>Developer Tools &amp; Cloud:</strong> Git/GitHub, Linux, AWS, Google Cloud, Bruno, Postman.</li>
+        <li><strong>AI Coding Tools:</strong> Cursor, Google Antigravity, OpenCode.</li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+      <h2 class="section-title">PROJECTS</h2>
+
+      <!-- Project 1 -->
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-name"><strong>Agentic AI Coding Assistant</strong> | <a href="https://github.com/Sagetrash/SimpleAiAgent" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+          <span class="timeline"><strong>MAR 2026</strong></span>
+        </div>
+        <div class="tech-stack">
+          <strong>Tech Stack:</strong> Python 3.14, Gemini API, Function Calling, System Prompting
+        </div>
+        <ul class="bullet-list">
+          <li>Built an autonomous <strong>AI coding assistant</strong> using <strong>Google Gemini</strong> that turns natural language prompts into step-by-step file system actions.</li>
+          <li>Equipped the AI with <strong>4 core tools</strong> (file reading, writing, directory search, and Python code execution) to interact directly with local files.</li>
+          <li>Designed a <strong>clean, modular architecture</strong> in Python 3.14, keeping AI tool definitions, execution code, and the main control loop neatly separated.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-name"><strong>Business Operations Automation</strong> | <a href="https://github.com/Sagetrash" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+          <span class="timeline"><strong>NOV 2025 &ndash; Present</strong></span>
+        </div>
+        <div class="tech-stack">
+          <strong>Tech Stack:</strong> SQLite, Turso Cloud DB, Etsy OpenAPI, S3
+        </div>
+        <ul class="bullet-list">
+          <li>Helped business <strong>scale output by 5x</strong> (from 20 to 120+ items/day) while cutting overall processing workload by <strong>50%</strong>.</li>
+          <li>Designed an <strong>all-in-one desktop business app</strong> that connects local stock tracking, cloud photo storage, and Etsy store listing into a single automated workflow.</li>
+          <li>Automated <strong>label printing and order tracking</strong>, replacing manual spreadsheet data entry with instant sticker generation and real-time sales syncing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section">
+      <h2 class="section-title">Certifications</h2>
+      <ul class="bullet-list cert-list">
+        <li>Google Cloud Foundations Certificate.</li>
+        <li>Google Cloud Engineering Certificate.</li>
+        <li>
+          NPTEL Certifications:
+          <ol class="numbered-list">
+            <li>Business Fundamentals for Entrepreneurs (93%)</li>
+            <li>Foundation of Digital Business (92%)</li>
+            <li>Business and Sustainable Development (88%)</li>
+          </ol>
+        </li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

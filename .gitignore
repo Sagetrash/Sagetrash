@@ -1,0 +1,11 @@
+# Sensitive & Personal Documents
+aadhaar*.pdf
+Marksheets/
+passport photo.*
+*.docx
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
