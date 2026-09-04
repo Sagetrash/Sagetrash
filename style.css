@@ -79,6 +79,72 @@ body {
   }
 }
 
+/* Mobile & Small Phone Screen Calibration (< 640px) */
+@media screen and (max-width: 640px) {
+  body {
+    padding: 12px 0 24px;
+    background-color: #f3f4f6;
+  }
+
+  .print-bar {
+    padding: 0 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .print-btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .resume {
+    width: 100%;
+    padding: 16px 14px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  .name {
+    font-size: 16pt;
+  }
+
+  .contact-info,
+  .contact-links {
+    font-size: 9pt;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .profile-text {
+    text-align: left;
+    font-size: 9.5pt;
+  }
+
+  .flex-row,
+  .project-header,
+  .school-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .timeline {
+    text-align: left;
+    margin-left: 0;
+    font-size: 9pt;
+    color: #4b5563;
+  }
+
+  .bullet-list {
+    padding-left: 16px;
+  }
+
+  .bullet-list li {
+    font-size: 9.5pt;
+  }
+}
+
 /* Links */
 a {
   color: #000000;
