@@ -70,7 +70,7 @@ print(DeveloperProfile().execute_daily_routine())
 
 | Project | Highlights & Technical Scope | Stack |
 | :--- | :--- | :--- |
-| 🤖 **[SimpleAiAgent](https://github.com/Sagetrash/SimpleAiAgent)** | Autonomous AI agent powered by GenAI SDK with multi-step directory traversal, safe file state modification, and dynamic Python script execution. | `Python` `GenAI SDK` `Agentic AI` |
+| 🤖 **[SimpleAiAgent](https://github.com/Sagetrash/SimpleAiAgent)** | AI coding assistant with real-time web workspace, live progress tracking, and sandboxed code execution. | `FastAPI` `React` `Python` |
 | ⚡ **[Ai-log-analyzer](https://github.com/Sagetrash/Ai-log-analyzer)** | Microservice REST API built for real-time log ingestion, automated root-cause extraction, and structured JSON responses. | `FastAPI` `GenAI SDK` `Python` |
 | 🌐 **[intelligence-platform](https://github.com/Sagetrash/intelligence-platform)** | Scalable intelligence platform engineered for complex data transformation, analytics, and automated insight generation. | `TypeScript` `Node.js` |
 
