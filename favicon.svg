@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Rounded dark background for visibility in both dark & light browser tabs -->
+  <rect width="64" height="64" rx="16" fill="#111827"/>
+  <!-- Document paper sheet with folded top-right corner -->
+  <path d="M42 12H22a4 4 0 0 0-4 4v32a4 4 0 0 0 4 4h20a4 4 0 0 0 4-4V20z" fill="#f8fafc"/>
+  <path d="M42 12v8h8z" fill="#cbd5e1"/>
+  <!-- Resume header bar (accent blue) -->
+  <line x1="24" y1="26" x2="34" y2="26" stroke="#0284c7" stroke-width="3" stroke-linecap="round"/>
+  <!-- Resume content text lines -->
+  <line x1="24" y1="33" x2="40" y2="33" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="24" y1="39" x2="38" y2="39" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="24" y1="45" x2="32" y2="45" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
