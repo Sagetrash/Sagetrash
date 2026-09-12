@@ -32,7 +32,22 @@
     </button>
   </div>
 
+  <!-- A4 Overflow Warning Alert (Hidden by default, shown if content exceeds 297mm) -->
+  <div id="a4-warning" class="a4-warning-banner no-print" style="display: none;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+      <line x1="12" y1="9" x2="12" y2="13"></line>
+      <line x1="12" y1="17" x2="12.01" y2="17"></line>
+    </svg>
+    <span id="a4-warning-text">Content exceeds 1 A4 page height. Reduce content or spacing to prevent spilling onto Page 2.</span>
+  </div>
+
   <div class="resume">
+    <!-- Visual guideline marking the exact 297mm A4 bottom boundary -->
+    <div id="a4-cutoff" class="a4-cutoff-line no-print">
+      <span>A4 Page 1 Limit &mdash; Content below this line spills onto Page 2</span>
+    </div>
     <!-- HEADER -->
     <header class="header">
       <h1 class="name">AYUSH SHARMA</h1>
@@ -119,7 +134,7 @@
       <!-- Project 2 -->
       <div class="project-entry">
         <div class="project-header">
-          <span class="project-name"><strong>Business Operations Automation</strong> | <a
+          <span class="project-name"><strong>TGNJ Operations Platform</strong> | <a
               href="https://github.com/Sagetrash/tgnj-app" target="_blank" rel="noopener noreferrer">GitHub</a></span>
           <span class="timeline"><strong>NOV 2025 &ndash; JUL 2026</strong></span>
         </div>
@@ -133,6 +148,24 @@
             photo storage, and Etsy store listing into a single automated workflow.</li>
           <li>Automated <strong>label printing and order tracking</strong>, replacing manual spreadsheet data entry with
             instant sticker generation and real-time sales syncing.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-name"><strong>AI Log Analyzer</strong> | <a
+              href="https://github.com/Sagetrash/Ai-log-analyzer" target="_blank"
+              rel="noopener noreferrer">GitHub</a></span>
+          <span class="timeline"><strong>JAN 2026 &ndash; FEB 2026</strong></span>
+        </div>
+        <div class="tech-stack">
+          <strong>Tech Stack:</strong> FastAPI, Python, Google Gemini API, REST APIs
+        </div>
+        <ul class="bullet-list">
+          <li>Built a backend API to upload and analyze server log files in real time.</li>
+          <li>Used <strong>Google Gemini</strong> to automatically detect error patterns, identify root causes, and suggest plain-English fixes.</li>
+          <li>Delivered structured, actionable summaries to help developers troubleshoot and resolve system issues faster.</li>
         </ul>
       </div>
     </section>
@@ -154,6 +187,46 @@
       </ul>
     </section>
   </div>
+
+  <!-- Live A4 Overflow Detection Script -->
+  <script>
+    function checkA4Overflow() {
+      const resume = document.querySelector('.resume');
+      const warning = document.getElementById('a4-warning');
+      const warningText = document.getElementById('a4-warning-text');
+      const cutoff = document.getElementById('a4-cutoff');
+      if (!resume || !warning || !cutoff) return;
+
+      // When screen width is standard desktop (>= 800px)
+      if (window.innerWidth >= 800) {
+        // scrollHeight includes all child content, clientHeight is inner height (297mm)
+        const isOverflowing = resume.scrollHeight > resume.clientHeight + 2;
+
+        if (isOverflowing) {
+          const overflowPx = resume.scrollHeight - resume.clientHeight;
+          const overflowMm = Math.round(overflowPx * 0.264583);
+          warning.style.display = 'flex';
+          warningText.innerHTML = `<strong>A4 Overflow Detected:</strong> Content exceeds 1 page by ~${overflowPx}px (~${overflowMm}mm). Content below the red dashed line will spill onto Page 2 when printed.`;
+          cutoff.style.display = 'block';
+          resume.classList.add('has-overflow');
+        } else {
+          warning.style.display = 'none';
+          cutoff.style.display = 'none';
+          resume.classList.remove('has-overflow');
+        }
+      } else {
+        warning.style.display = 'none';
+        cutoff.style.display = 'none';
+        resume.classList.remove('has-overflow');
+      }
+    }
+
+    window.addEventListener('load', checkA4Overflow);
+    window.addEventListener('resize', checkA4Overflow);
+    if (document.fonts) {
+      document.fonts.ready.then(checkA4Overflow);
+    }
+  </script>
 </body>
 
 </html>
