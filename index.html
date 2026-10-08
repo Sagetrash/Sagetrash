@@ -22,33 +22,18 @@
       </svg>
       Download PDF
     </a>
-    <button type="button" onclick="window.print()" class="print-btn" title="Print or Save via browser">
+    <button type="button" onclick="printPDF()" class="print-btn" title="Print compiled A4 PDF">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round">
         <polyline points="6 9 6 2 18 2 18 9"></polyline>
         <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
         <rect x="6" y="14" width="12" height="8"></rect>
       </svg>
-      Print
+      Print PDF
     </button>
   </div>
 
-  <!-- A4 Overflow Warning Alert (Hidden by default, shown if content exceeds 297mm) -->
-  <div id="a4-warning" class="a4-warning-banner no-print" style="display: none;">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-      stroke-linecap="round" stroke-linejoin="round">
-      <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
-      <line x1="12" y1="9" x2="12" y2="13"></line>
-      <line x1="12" y1="17" x2="12.01" y2="17"></line>
-    </svg>
-    <span id="a4-warning-text">Content exceeds 1 A4 page height. Reduce content or spacing to prevent spilling onto Page 2.</span>
-  </div>
-
   <div class="resume">
-    <!-- Visual guideline marking the exact 297mm A4 bottom boundary -->
-    <div id="a4-cutoff" class="a4-cutoff-line no-print">
-      <span>A4 Page 1 Limit &mdash; Content below this line spills onto Page 2</span>
-    </div>
     <!-- HEADER -->
     <header class="header">
       <h1 class="name">AYUSH SHARMA</h1>
@@ -99,7 +84,7 @@
       <h2 class="section-title">TECHNICAL SKILLS</h2>
       <ul class="bullet-list skills-list">
         <li><strong>Languages:</strong> Python, Java, SQL (PostgreSQL, SQLite), JavaScript, HTML/CSS.</li>
-        <li><strong>AI &amp; LLM:</strong> Gemini API, RAG, Agentic AI, Prompt Engineering, n8n Automation.</li>
+        <li><strong>AI &amp; ML:</strong> Gemini API, OpenCV, Computer Vision, RAG, Agentic AI, Prompt Engineering.</li>
         <li><strong>Frameworks &amp; APIs:</strong> FastAPI, React, Flask, OpenAPI / Swagger UI, RESTful APIs, Pandas.
         </li>
         <li><strong>Developer Tools &amp; Cloud:</strong> Git/GitHub, Linux, Docker, AWS, Google Cloud, Bruno, Postman.</li>
@@ -135,6 +120,23 @@
       <!-- Project 2 -->
       <div class="project-entry">
         <div class="project-header">
+          <span class="project-name"><strong>OpenKYC &ndash; Biometric Verification Platform</strong> | <a
+              href="https://github.com/Sagetrash/KYC" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+          <span class="timeline"><strong>SEP 2026 &ndash; OCT 2026</strong></span>
+        </div>
+        <div class="tech-stack">
+          <strong>Tech Stack:</strong> FastAPI, React 19, Python 3.13, OpenCV, Gemini API, Web Audio API
+        </div>
+        <ul class="bullet-list">
+          <li>Architected a <strong>zero-cost ($0 API budget) multi-modal KYC pipeline</strong> delivering automated ID extraction, 1:1 facial verification, and voice biometrics.</li>
+          <li>Integrated <strong>Google Gemini Flash</strong> for structured document OCR alongside <strong>OpenCV</strong> to detect and auto-crop ID portraits with smart boundary padding.</li>
+          <li>Built high-accuracy <strong>face and voice matching models locally</strong>, comparing live camera captures and voice recordings in milliseconds without sending user data to third-party APIs.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-entry">
+        <div class="project-header">
           <span class="project-name"><strong>TGNJ Operations Platform</strong> | <a
               href="https://github.com/Sagetrash/tgnj-app" target="_blank" rel="noopener noreferrer">GitHub</a></span>
           <span class="timeline"><strong>NOV 2025 &ndash; JUL 2026</strong></span>
@@ -149,24 +151,6 @@
             photo storage, and Etsy store listing into a single automated workflow.</li>
           <li>Automated <strong>label printing and order tracking</strong>, replacing manual spreadsheet data entry with
             instant sticker generation and real-time sales syncing.</li>
-        </ul>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-entry">
-        <div class="project-header">
-          <span class="project-name"><strong>AI Log Analyzer</strong> | <a
-              href="https://github.com/Sagetrash/Ai-log-analyzer" target="_blank"
-              rel="noopener noreferrer">GitHub</a></span>
-          <span class="timeline"><strong>JAN 2026 &ndash; FEB 2026</strong></span>
-        </div>
-        <div class="tech-stack">
-          <strong>Tech Stack:</strong> FastAPI, Python, Google Gemini API, REST APIs
-        </div>
-        <ul class="bullet-list">
-          <li>Built a backend API to upload and analyze server log files in real time.</li>
-          <li>Used <strong>Google Gemini</strong> to automatically detect error patterns, identify root causes, and suggest plain-English fixes.</li>
-          <li>Delivered structured, actionable summaries to help developers troubleshoot and resolve system issues faster.</li>
         </ul>
       </div>
     </section>
@@ -189,43 +173,31 @@
     </section>
   </div>
 
-  <!-- Live A4 Overflow Detection Script -->
   <script>
-    function checkA4Overflow() {
-      const resume = document.querySelector('.resume');
-      const warning = document.getElementById('a4-warning');
-      const warningText = document.getElementById('a4-warning-text');
-      const cutoff = document.getElementById('a4-cutoff');
-      if (!resume || !warning || !cutoff) return;
-
-      // When screen width is standard desktop (>= 800px)
-      if (window.innerWidth >= 800) {
-        // scrollHeight includes all child content, clientHeight is inner height (297mm)
-        const isOverflowing = resume.scrollHeight > resume.clientHeight + 2;
-
-        if (isOverflowing) {
-          const overflowPx = resume.scrollHeight - resume.clientHeight;
-          const overflowMm = Math.round(overflowPx * 0.264583);
-          warning.style.display = 'flex';
-          warningText.innerHTML = `<strong>A4 Overflow Detected:</strong> Content exceeds 1 page by ~${overflowPx}px (~${overflowMm}mm). Content below the red dashed line will spill onto Page 2 when printed.`;
-          cutoff.style.display = 'block';
-          resume.classList.add('has-overflow');
-        } else {
-          warning.style.display = 'none';
-          cutoff.style.display = 'none';
-          resume.classList.remove('has-overflow');
-        }
-      } else {
-        warning.style.display = 'none';
-        cutoff.style.display = 'none';
-        resume.classList.remove('has-overflow');
+    function printPDF() {
+      const pdfUrl = 'Ayush_Sharma_Resume.pdf';
+      let iframe = document.getElementById('pdf-print-iframe');
+      if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.id = 'pdf-print-iframe';
+        iframe.style.position = 'fixed';
+        iframe.style.right = '0';
+        iframe.style.bottom = '0';
+        iframe.style.width = '0';
+        iframe.style.height = '0';
+        iframe.style.border = '0';
+        document.body.appendChild(iframe);
       }
-    }
-
-    window.addEventListener('load', checkA4Overflow);
-    window.addEventListener('resize', checkA4Overflow);
-    if (document.fonts) {
-      document.fonts.ready.then(checkA4Overflow);
+      iframe.src = pdfUrl;
+      iframe.onload = function() {
+        try {
+          iframe.contentWindow.focus();
+          iframe.contentWindow.print();
+        } catch (e) {
+          // Fallback if browser blocks iframe printing
+          window.open(pdfUrl, '_blank');
+        }
+      };
     }
   </script>
 </body>

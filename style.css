@@ -74,59 +74,7 @@ body {
   box-sizing: border-box;
 }
 
-/* A4 Overflow Warning Banner & Cut-off Indicator */
-.a4-warning-banner {
-  width: 210mm;
-  margin: 0 auto 14px;
-  background-color: #fef2f2;
-  border: 1.5px solid #ef4444;
-  color: #991b1b;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.15);
-}
 
-.a4-warning-banner svg {
-  flex-shrink: 0;
-  color: #dc2626;
-}
-
-.a4-cutoff-line {
-  display: none;
-  position: absolute;
-  top: 297mm;
-  left: -20px;
-  right: -20px;
-  border-top: 2px dashed #ef4444;
-  text-align: center;
-  z-index: 100;
-  pointer-events: none;
-}
-
-.a4-cutoff-line span {
-  display: inline-block;
-  background: #ef4444;
-  color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 12px;
-  border-radius: 4px;
-  transform: translateY(-50%);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.resume.has-overflow {
-  border-bottom: 2px solid #ef4444;
-}
 
 @media screen and (max-width: 215mm) {
   .resume {
@@ -134,10 +82,6 @@ body {
     height: auto;
     min-height: auto;
     padding: 24px 18px;
-  }
-
-  .a4-warning-banner {
-    width: 100%;
   }
 }
 
@@ -234,8 +178,8 @@ a {
 
 /* Sections */
 .section {
-  margin-top: 10px;
-  margin-bottom: 3px;
+  margin-top: 8px;
+  margin-bottom: 2px;
 }
 
 .section-title {
@@ -244,13 +188,13 @@ a {
   text-transform: uppercase;
   border-bottom: 1.2px solid #000000;
   padding-bottom: 1px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 /* Profile */
 .profile-text {
   font-size: 9.8pt;
-  line-height: 1.38;
+  line-height: 1.36;
   text-align: justify;
 }
 
@@ -270,19 +214,19 @@ a {
 
 /* Education */
 .education-block {
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .university-name {
   font-weight: bold;
   font-style: italic;
   font-size: 10pt;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 
 .school-row {
   font-size: 9.8pt;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 /* Lists */
@@ -293,18 +237,18 @@ a {
 }
 
 .bullet-list li {
-  margin-bottom: 3px;
-  line-height: 1.38;
+  margin-bottom: 2.5px;
+  line-height: 1.35;
   font-size: 9.8pt;
 }
 
 .skills-list li {
-  margin-bottom: 2px;
+  margin-bottom: 1.5px;
 }
 
 /* Projects */
 .project-entry {
-  margin-bottom: 7.5px;
+  margin-bottom: 5.5px;
 }
 
 .project-header {
@@ -347,7 +291,7 @@ a {
 @media print {
   @page {
     size: A4 portrait;
-    margin: 10mm 12.7mm;
+    margin: 8mm 12.7mm;
   }
 
   body {
